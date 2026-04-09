@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Set character encoding and viewport settings for responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enron Homepage</title>
+    <!-- Link to external CSS stylesheet -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        /* Basic styling for the body */
+        body {
+            font-family: Arial, sans-serif; /* Set font family */
+            background-color: #f4f4f4; /* Light gray background */
+            color: #333; /* Dark text color */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+        /* Styling for the header section */
+        header {
+            background-color: #003d66; /* Dark blue from Enron logo */
+            color: white; /* White text color */
+            padding: 20px; /* Padding around header */
+            text-align: center; /* Center align text */
+        }
+        h1 {
+            margin: 0; /* Remove default margin for h1 */
+        }
+        /* Styling for secondary headings */
+        h2 {
+            color: #cc0000; /* Red from Enron logo */
+        }
+        /* Styling for images */
+        img {
+            max-width: 100%; /* Responsive image size */
+            height: auto; /* Maintain aspect ratio */
+            margin: 20px 0; /* Margin above and below image */
+        }
+        /* Container styling for content */
+        .container {
+            max-width: 800px; /* Maximum width of the container */
+            margin: auto; /* Center the container */
+            text-align: center; /* Center align text within container */
+            padding: 20px; /* Padding inside the container */
+            background: white; /* White background for the container */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            border-radius: 8px; /* Rounded corners */
+        }
+        /* Styling for anchor links */
+        a {
+            display: inline-block; /* Display links as block elements */
+            margin: 10px; /* Margin around links */
+            padding: 10px 20px; /* Padding inside links */
+            background-color: #E92A35; /* Red button color */
+            color: white; /* White text color for links */
+            text-decoration: none; /* Remove underline from links */
+            border-radius: 5px; /* Rounded corners for links */
+            transition: background-color 0.3s; /* Smooth transition for background color */
+        }
+        /* Hover effect for links */
+        a:hover {
+            background-color: #b62424; /* Darker red on hover */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Enron</h1> <!-- Main heading of the page -->
+</header>
+
+<div class="container">
+    <img src="{{ url_for('static', filename='Enron_Logo.svg') }}" alt="Enron Logo" width="500" height="500"> <!-- Enron logo image -->
+    <h2>Welcome to Enron</h2> <!-- Subheading -->
+    <p><a href="/signup/">Sign up here!</a></p> <!-- Sign up link -->
+    <p><a href="/login/">Log in here!</a></p> <!-- Log in link -->
+    <div>
+        <p>Enron Corporation is an American energy, commodities, and services company based in Houston, Texas. Our company founded by Kenneth Lay in 1985 as a merger between Lay's Houston Natural Gas and InterNorth, both relatively small regional companies.</p> <!-- Description of Enron Corporation -->
+    </div>
+</div>
+</body>
+</html>
